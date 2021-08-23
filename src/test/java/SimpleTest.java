@@ -1,6 +1,4 @@
 import com.codeborne.selenide.Condition;
-import com.codeborne.selenide.Configuration;
-import org.junit.jupiter.api.BeforeAll;
 import org.junit.jupiter.api.Test;
 
 import static com.codeborne.selenide.Selectors.byText;
@@ -10,11 +8,6 @@ import static io.qameta.allure.Allure.step;
 
 public class SimpleTest extends TestBase {
 
-    @BeforeAll
-    static void setup() {
-        Configuration.baseUrl = "https://demoqa.com";
-        Configuration.startMaximized = true;
-    }
 
     @Test
     void positiveFillTest() {
