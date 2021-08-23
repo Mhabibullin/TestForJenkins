@@ -35,7 +35,7 @@ public class SimpleTest extends TestBase {
                 $(byText("Sports")).click();
             });
             step("Upload image", () -> {
-                $("#uploadPicture").uploadFromClasspath("/src/test/resources/1.jpg");
+                $("#uploadPicture").uploadFromClasspath("src/test/resources/1.jpg");
             });
             step("Set address", () -> {
                 $("#currentAddress").setValue("Moscow, Lenina 1");
