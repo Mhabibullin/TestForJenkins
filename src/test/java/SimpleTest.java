@@ -1,22 +1,22 @@
 import com.codeborne.selenide.Condition;
 import com.codeborne.selenide.Configuration;
 import org.junit.jupiter.api.BeforeAll;
-import org.junit.jupiter.api.Tag;
+import org.junit.jupiter.api.Test;
 
 import static com.codeborne.selenide.Selectors.byText;
 import static com.codeborne.selenide.Selenide.$;
 import static com.codeborne.selenide.Selenide.open;
 import static io.qameta.allure.Allure.step;
 
-public class Test extends TestBase {
+public class SimpleTest extends TestBase {
+
     @BeforeAll
     static void setup() {
         Configuration.baseUrl = "https://demoqa.com";
         Configuration.startMaximized = true;
     }
 
-    @org.junit.jupiter.api.Test
-    @Tag("smoke")
+    @Test
     void positiveFillTest() {
         step("Open students registration form", () -> {
             open("/automation-practice-form");
