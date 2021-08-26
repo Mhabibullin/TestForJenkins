@@ -48,7 +48,6 @@ tasks.withType(JavaCompile) {
 }
 
 tasks.withType(Test) {
-    systemProperties(System.getProperties()) //не нужна
     systemProperty("url", System.getProperty("url"))
     useJUnitPlatform()
 
