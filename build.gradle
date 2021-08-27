@@ -48,7 +48,8 @@ tasks.withType(JavaCompile) {
 }
 
 tasks.withType(Test) {
-    systemProperty("url", System.getProperty("url"))
+    systemProperty("url", System.getProperty("url","selenoid.autotests.cloud/wd/hub/"))
+
     useJUnitPlatform()
 
     testLogging {
@@ -61,7 +62,7 @@ tasks.withType(Test) {
 }
 
 task smoke(type: Test) {
-    useJUnitPlatform {
+        useJUnitPlatform {
         includeTags 'smoke'
     }
 }
